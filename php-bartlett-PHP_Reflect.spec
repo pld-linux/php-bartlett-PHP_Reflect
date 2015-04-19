@@ -1,5 +1,6 @@
 %define		status		stable
 %define		pearname	PHP_Reflect
+%define		php_min_version 5.2.0
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Adds the ability to reverse-engineer classes, interfaces, functions, constants, namespaces, traits and more
 Name:		php-bartlett-PHP_Reflect
@@ -15,6 +16,7 @@ BuildRequires:	php-packagexml2cl
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
+Requires:	php(core) >= %{php_min_version}
 Requires:	php(pcre)
 Requires:	php(spl)
 Requires:	php(tokenizer)
@@ -23,8 +25,6 @@ Requires:	php-pear
 Suggests:	php-phpunit-PHPUnit
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sysconfdir	%(pear config-get cfg_dir 2>/dev/null || ERROR)/%{pearname}
 
 # exclude optional dependencies
 %define		_noautoreq_pear PHPUnit.*
