@@ -59,5 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc optional-packages.txt
 %doc docs/PHP_Reflect/*
 %{php_pear_dir}/.registry/.channel.*/*.reg
+%dir %{php_pear_dir}/Bartlett
+%dir %{php_pear_dir}/Bartlett/PHP
 %{php_pear_dir}/Bartlett/PHP/Reflect.php
 %{php_pear_dir}/Bartlett/PHP/Reflect
