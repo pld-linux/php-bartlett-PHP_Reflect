@@ -1,7 +1,6 @@
 %define		status		stable
 %define		pearname	PHP_Reflect
 %define		php_min_version 5.2.0
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Adds the ability to reverse-engineer classes, interfaces, functions, constants, namespaces, traits and more
 Name:		php-bartlett-PHP_Reflect
 Version:	1.9.0
